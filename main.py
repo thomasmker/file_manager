@@ -13,7 +13,9 @@ def get_args():
 
 def main():
     path, prefix, suffix = get_args()
-    file_manager = FileManager(path, prefix, suffix)
+    file_manager = FileManager(path)
+    file_manager.prefix = prefix
+    file_manager.suffix = suffix
     file_manager.remove_prefix_suffix()
     return
 
