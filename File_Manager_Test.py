@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
         file_manager.prefix = self.prefix
         file_manager.suffix = self.suffix
 
-        file_manager.create_directory()
+        file_manager.clean_directory()
 
         # Creating the files
         desired_file_names = {"01.txt", "02.txt"}
@@ -29,7 +29,7 @@ class MyTestCase(unittest.TestCase):
         # Checking the result
         renamed_files = file_manager.get_directory_files()
 
-        self.assertEqual(desired_file_names == set(renamed_files), True)
+        assert desired_file_names == set(renamed_files)
 
         # Removing the directory and its content
         file_manager.remove_directory_and_contents()
@@ -40,7 +40,7 @@ class MyTestCase(unittest.TestCase):
         file_manager = FileManager(path)
         file_manager.prefix = self.prefix
 
-        file_manager.create_directory()
+        file_manager.clean_directory()
 
         # Creating the files
         desired_file_names = {"01.txt", "02.txt"}
@@ -63,7 +63,8 @@ class MyTestCase(unittest.TestCase):
 
         file_manager = FileManager(path)
         file_manager.suffix = self.suffix
-        file_manager.create_directory()
+
+        file_manager.clean_directory()
 
         # Creating the files
         desired_file_names = {"01.txt", "02.txt"}
@@ -88,7 +89,7 @@ class MyTestCase(unittest.TestCase):
         file_manager.prefix = self.prefix
         file_manager.suffix = self.suffix
 
-        file_manager.create_directory()
+        file_manager.clean_directory()
 
         # Creating the files
         desired_file_names = {"01", "02"}

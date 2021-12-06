@@ -64,12 +64,20 @@ class FileManager:
     def get_directory_files(self):
         return [f for f in listdir(self.path) if isfile(join(self.path, f))]
 
+    def directory_exists(self):
+        return exists(self.path)
+
     def create_directory(self):
-        if not exists(self.path):
+        if not self.directory_exists():
             makedirs(self.path)
 
     def remove_directory_and_contents(self):
-        shutil.rmtree(self.path)
+        if self.directory_exists():
+            shutil.rmtree(self.path)
+
+    def clean_directory(self):
+        self.remove_directory_and_contents()
+        self.create_directory()
 
     def add_prefix_to_files(self, filenames):
         return [f"{self._prefix}{file}" for file in filenames]
