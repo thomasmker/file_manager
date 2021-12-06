@@ -1,6 +1,6 @@
 import argparse
 from File_Manager import FileManager
-import os
+
 
 def get_args():
     parser = argparse.ArgumentParser()
