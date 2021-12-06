@@ -5,8 +5,8 @@ from File_Manager import FileManager
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--path', '-path', help="the path folder", type=str)
-    parser.add_argument('--prefix', '-p', help="the prefix to be removed", type=str, default="")
-    parser.add_argument('--suffix', '-s', help="the suffix to be removed", type=str, default="")
+    parser.add_argument('--prefix', '-p', help="the prefix to be removed (optional)", type=str, default="")
+    parser.add_argument('--suffix', '-s', help="the suffix to be removed (optional)", type=str, default="")
     args = parser.parse_args()
     return args.path, args.prefix, args.suffix
 
