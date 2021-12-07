@@ -1,3 +1,4 @@
+on
 # File Manager
 A personal use file manager to rename files removing prefix and suffix in batch
 
@@ -10,7 +11,7 @@ __From:__ [GST] JoJo no Kimyou na Bouken Part 6 Stone Ocean - 01 [1080p].mkv
 
 __To:__ 01.mkv
 
-Given this project I also took the opportunity to use the python unit test and pytest for the first time
+I use this project as an opportunity to use the python unittest and pytest for the first time
 
 ## Scope of functionalities 
 - From the terminal only the remove prefix and suffix functionality is available
@@ -34,6 +35,5 @@ python main.py -h
 ```
 
 ## Technologies
-- Python
-- Python unit test
-- Pytest
+- Python 3.9.1
+- Pytest 6.2.5
